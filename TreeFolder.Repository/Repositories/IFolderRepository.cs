@@ -7,5 +7,7 @@ namespace TreeFolder.Repository.Repositories
     public interface IFolderRepository: IBaseRepository<Folder>
     {
         Folder GetRootFolder();
+        Folder GetFolder(string path);
+        ICollection<Folder> GetSubFolders(long pid);
     }
 }
