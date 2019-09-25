@@ -7,8 +7,11 @@ namespace TreeFolder.DAL.ModelConfiguration
     {
         public FolderConfiguration()
         {
-            this.Property(f => f.FolderName).IsRequired().HasMaxLength(50);
+            this.Property(f => f.FolderName).IsRequired().HasMaxLength(100);
             this.Property(f => f.NavURL).IsRequired();
+            this.HasOptional(f => f.ParentFolder)
+                            .WithMany(f => f.Children)
+                            .HasForeignKey(f => f.ParentFolderId);
         }
     }
 }

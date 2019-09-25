@@ -6,6 +6,6 @@ namespace TreeFolder.Repository.Repositories
 {
     public interface IFolderRepository: IBaseRepository<Folder>
     {
-        ICollection<Folder> GetChildFolders(Folder node);
+        Folder GetRootFolder();
     }
 }

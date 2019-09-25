@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using TreeFolder.DAL.Model;
 using TreeFolder.Repository.BaseRepository;
 
@@ -13,10 +12,9 @@ namespace TreeFolder.Repository.Repositories
 
         }
 
-        public ICollection<Folder> GetChildFolders(Folder node)
+        public Folder GetRootFolder()
         {
-
-            throw new System.NotImplementedException();
+            return SingleOrDefault(f => f.ParentFolderId == null);
         }
     }
 }

@@ -13,52 +13,55 @@ namespace TreeFolder.DAL.ModelInitializer
                 new Folder
                 {
                     FolderName = "Creating Digital Images",
+                    FolderOrder = 1,
                     NavURL = "", //TODO
-                    ChildFolders = new List<Folder>
+                    Children = new List<Folder>
                     {
                         new Folder
                         {
                             FolderName = "Resources",
+                            FolderOrder = 1,
                             NavURL = "", //TODO
-                            ChildFolders = new List<Folder>
+                            Children = new List<Folder>
                             {
                                 new Folder
                                 {
                                     FolderName = "Primary Sources",
-                                    NavURL = "", //TODO
-                                    ChildFolders = null
+                                    FolderOrder = 1,
+                                    NavURL = "" //TODO
                                 },
                                 new Folder
                                 {
                                     FolderName = "Secondary Sources",
-                                    NavURL = "", //TODO
-                                    ChildFolders = null
+                                    FolderOrder = 2,
+                                    NavURL = "" //TODO
                                 }
                             }
                         },
                         new Folder
                         {
                             FolderName = "Evidence",
-                            NavURL = "", //TODO
-                            ChildFolders = null
+                            FolderOrder = 2,
+                            NavURL = "" //TODO
                         },
                         new Folder
                         {
                             FolderName = "Graphic Products",
+                            FolderOrder = 3,
                             NavURL = "", //TODO
-                            ChildFolders = new List<Folder>
+                            Children = new List<Folder>
                             {
                                 new Folder
                                 {
                                     FolderName = "Process",
-                                    NavURL = "", //TODO
-                                    ChildFolders = null
+                                    FolderOrder = 1,
+                                    NavURL = "" //TODO
                                 },
                                 new Folder
                                 {
                                     FolderName = "Final Product",
-                                    NavURL = "", //TODO
-                                    ChildFolders = null
+                                    FolderOrder = 2,
+                                    NavURL = "" //TODO
                                 }
                             }
                         }

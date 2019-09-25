@@ -6,10 +6,13 @@ namespace TreeFolder.DAL.Model
     /// <summary>
     /// Keeps folders in database
     /// </summary>
-    public partial class Folder : AuditableEntity<long>
+    public class Folder : AuditableEntity<long>
     {
         public string FolderName { get; set; }
         public string NavURL { get; set; }
-        public ICollection<Folder> ChildFolders { get; set; }
+        public int? FolderOrder { get; set; }
+        public long? ParentFolderId { get; set; }
+        public virtual Folder ParentFolder { get; set; }
+        public virtual ICollection<Folder> Children { get; set; }
     }
 }
